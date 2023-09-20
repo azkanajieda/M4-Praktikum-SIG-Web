@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Web Map dengan LeafletJS</title>
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet0.7.3/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+ <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+ <style>
+    #map {
+        width: 960px;
+        height: 500px;
+    }
+
+ </style>
+</head>
+<body>
+ <div id="map"></div>
+ <script>
+    var map = L.map('map', {
+        center: [-7.79558, 110.36949],
+        zoom: 12
+    });
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+ </script>
+</body>
+</html>
